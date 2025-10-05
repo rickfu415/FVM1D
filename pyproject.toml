@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling>=1.21.1"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fvm1d"
+version = "0.1.0"
+description = "A simple 1D finite volume method framework."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Your Name", email = "you@example.com" }
+]
+dependencies = [
+  "numpy>=1.23"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.urls]
+Homepage = "https://example.com/fvm1d"
+Repository = "https://example.com/fvm1d/repo"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fvm1d"]
+
+
